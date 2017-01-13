@@ -27,27 +27,6 @@ BinarySearchTree::~BinarySearchTree() // Destructor.
 	destroy();
 }
 
-void BinarySearchTree::destroy(Node *leaf) // Recursively deletes each node in the tree, from bottom to top.
-{
-	if (leaf != NULL)
-	{
-		destroy(leaf->left);
-		destroy(leaf->right);
-		if (leaf->left != NULL)
-			leaf->left = NULL;
-		if (leaf->right != NULL)
-			leaf->right = NULL;
-		leaf = NULL;
-		delete(leaf);
-	}
-	delete(leaf);
-}
-
-void BinarySearchTree::destroy()
-{
-	destroy(root);
-}
-
 void BinarySearchTree::insert(int key, Node *leaf) // Inserts a value into the tree based on its key_value. If the key_value of a node
 //is less than its parent, it will be placed on the left. If it is greater, it will be placed on the right.
 {
@@ -91,9 +70,4 @@ void BinarySearchTree::insert(int key) // If there is no root, this insert creat
 		root->left = NULL;
 		root->right = NULL;
 	}
-}
-
-double BinarySearchTree::getDepthTotal() // Returns the public class variable "depth_total".
-{
-	return depth_total;
 }
