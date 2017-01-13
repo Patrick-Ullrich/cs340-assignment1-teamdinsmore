@@ -22,7 +22,7 @@ class BinaryTree : public Tree
 public:
 	BinaryTree();
 	~BinaryTree();
-
+	
 	void insert(int key, int bin);
 
 private:

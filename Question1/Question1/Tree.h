@@ -27,6 +27,6 @@ protected:
 public:
 	void destroy();
 	double getDepthTotal();
-	virtual void insert() = 0;
+	//virtual void insert() = 0;
 
 };
