@@ -18,6 +18,7 @@ depth of all of the trees by dividing the total depth by the number of nodes cre
 #include <cmath>
 #include "Node.h"
 #include "BinarySearchTree.h"
+#include "BinaryTree.h"
 
 using namespace std;
 
@@ -111,18 +112,19 @@ int main() {
 		cin >> print_progress_frequency;
 		progress_counter = 0;
 		for (int i = 0; i < tree_amount; i++) {
-			//BinaryTree binaryTree
+			BinaryTree binaryTree;
+
 			for (int j = 0; j < node_amount; j++) {
 				int test = dis(gen);
 				int binary = one_zero(gen);
-				//	binaryTree.insert(test, binary);
+				binaryTree.insert(test, binary);
 			}
-			//total_tree_depth += binaryTree.getDepthTotal();
+			total_tree_depth += binaryTree.getDepthTotal();
 			if (progress_counter % print_progress_frequency == 0) {
 				cout << "* ";
 			}
 			progress_counter++;
-			//binaryTree.destroy();
+			binaryTree.destroy();
 		}
 		progress_counter = 0;
 

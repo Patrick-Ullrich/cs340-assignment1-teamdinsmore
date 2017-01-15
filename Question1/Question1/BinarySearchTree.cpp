@@ -16,19 +16,22 @@ Purpose: This is where the functions for the BinarySearchTree class are defined.
 
 using namespace std;
 
-BinarySearchTree::BinarySearchTree() // Default Constructor.
+// Default Constructor.
+BinarySearchTree::BinarySearchTree() 
 {
 	root = NULL;
 	depth_total = 0;
 }
 
-BinarySearchTree::~BinarySearchTree() // Destructor.
+// Destructor.
+BinarySearchTree::~BinarySearchTree() 
 {
 	destroy();
 }
 
-void BinarySearchTree::insert(int key, Node *leaf) // Inserts a value into the tree based on its key_value. If the key_value of a node
+// Inserts a value into the tree based on its key_value. If the key_value of a node
 //is less than its parent, it will be placed on the left. If it is greater, it will be placed on the right.
+void BinarySearchTree::insert(int key, Node *leaf)
 {
 	if (key < leaf->key_value) // if less, then go left
 	{
@@ -58,7 +61,8 @@ void BinarySearchTree::insert(int key, Node *leaf) // Inserts a value into the t
 	}
 }
 
-void BinarySearchTree::insert(int key) // If there is no root, this insert creates the root with value "key". Else, it calls the other insert.
+// If there is no root, this insert creates the root with value "key". Else, it calls the other insert.
+void BinarySearchTree::insert(int key)
 {
 	if (root != NULL) {
 		depth_total++;
