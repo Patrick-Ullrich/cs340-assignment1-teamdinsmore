@@ -19,7 +19,8 @@ using namespace std;
 
 class Node {
 public:
-	int key_value; //stores the key
-	Node *left; // points to its left leaf
-	Node *right; // points to its right leaf
+	int key_value;	// stores the key
+	Node *left;		// points to its left leaf
+	Node *right;	// points to its right leaf
+	int height;		// Track height of node
 };

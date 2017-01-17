@@ -1,7 +1,6 @@
-﻿  main.cpp
-  BinaryTree.cpp
-  BinarySearchTree.cpp
+﻿  AVLTree.cpp
   Generating Code...
-  LINK : C:\Users\Austin\Desktop\University\CS340\Assignment 1\Question 1\Question1\Debug\Question1.exe not found or not built by the last incremental link; performing full link
-  Question1.vcxproj -> C:\Users\Austin\Desktop\University\CS340\Assignment 1\Question 1\Question1\Debug\Question1.exe
-  Question1.vcxproj -> C:\Users\Austin\Desktop\University\CS340\Assignment 1\Question 1\Question1\Debug\Question1.pdb (Full PDB)
+  Skipping... (no relevant changes detected)
+  main.cpp
+  Question1.vcxproj -> C:\Users\patri\Documents\Visual Studio 2015\Projects\cs340-assignment1-teamdinsmore\Question1\Debug\Question1.exe
+  Question1.vcxproj -> C:\Users\patri\Documents\Visual Studio 2015\Projects\cs340-assignment1-teamdinsmore\Question1\Debug\Question1.pdb (Full PDB)

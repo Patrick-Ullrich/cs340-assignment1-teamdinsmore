@@ -19,6 +19,7 @@ depth of all of the trees by dividing the total depth by the number of nodes cre
 #include "Node.h"
 #include "BinarySearchTree.h"
 #include "BinaryTree.h"
+#include "AVLTree.h"
 
 using namespace std;
 
@@ -51,8 +52,7 @@ int main() {
 		for (int i = 0; i < tree_amount; i++) {
 			BinarySearchTree binarySearchTree;
 			for (int j = 0; j < node_amount; j++) {
-				int test = dis(gen);
-				binarySearchTree.insert(test);
+				binarySearchTree.insert(dis(gen));
 			}
 			total_tree_depth += binarySearchTree.getDepthTotal();
 			if (progress_counter % print_progress_frequency == 0) {
@@ -81,17 +81,17 @@ int main() {
 		cin >> print_progress_frequency;
 		progress_counter = 0;
 		for (int i = 0; i < tree_amount; i++) {
-			//AVLTree avlTree
+			AVLTree avlTree;
+
 			for (int j = 0; j < node_amount; j++) {
-				int test = dis(gen);
-			//	avlTree.insert(test);
+				avlTree.insert(dis(gen));
 			}
-			//total_tree_depth += avlTree.getDepthTotal();
+			total_tree_depth += avlTree.getDepthTotal();
 			if (progress_counter % print_progress_frequency == 0) {
 				cout << "* ";
 			}
 			progress_counter++;
-			//avlTree.destroy();
+			avlTree.destroy();
 		}
 		progress_counter = 0;
 
@@ -115,9 +115,7 @@ int main() {
 			BinaryTree binaryTree;
 
 			for (int j = 0; j < node_amount; j++) {
-				int test = dis(gen);
-				int binary = one_zero(gen);
-				binaryTree.insert(test, binary);
+				binaryTree.insert(dis(gen), one_zero(gen));
 			}
 			total_tree_depth += binaryTree.getDepthTotal();
 			if (progress_counter % print_progress_frequency == 0) {
@@ -135,7 +133,6 @@ int main() {
 		cout << "Average depth: " << total_average << '\n';
 		cout << "Log " << node_amount << ": " << log(node_amount) << '\n';
 		cout << "Square Root " << node_amount << ": " << sqrt(node_amount) << '\n';
-		break;
 		break;
 	}
 
